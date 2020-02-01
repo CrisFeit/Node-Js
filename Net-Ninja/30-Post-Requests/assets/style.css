@@ -1,0 +1,36 @@
+
+  body{
+    background: skyblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: snow;
+    padding: 30px;
+  }
+  h1{font-size: 48px; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
+
+  p{font-size: 16px; text-align: center;}
+
+  #contact-form{
+    width: 40%;
+    margin: auto;
+  }
+  #contact-form label {
+    width: 80%;
+    text-align: left ;
+    margin-bottom: 2em;
+    padding-bottom: 30px;
+  }
+  
+  #contact-form input:not([type="submit"]){
+    text-align: left;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2em;
+    padding: 5px;
+  }
+  #contact-form input[type='submit']{
+    padding: 10px 30px ;
+    background-color: teal;
+    color: snow;
+    cursor: pointer;
+    font-size: large;
+  }
