@@ -34,6 +34,7 @@ app.get('/',function(req,res){
     articles : articles
   })
 })
+
 app.get('/articles/add',function(req,res){
   res.render('add-article',{
     title: 'Add Article'
