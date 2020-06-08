@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+      class App extends React.Component {
+        
+        state = {
+          name: 'Ryu',
+          age: 30,
+        }
+
+        handleClick = (event) =>{
+          console.log(this.state)
+          this.setState({
+            name: 'Yoshi',
+            age: '25'
+          })
+        }
+        handleMouseOver = (event) =>{
+          console.log(event.target,event.pageX);
+        }
+        handleCopy = (event) =>{
+          console.log('Elemento Copiado');
+        }
+
+        render(){
+          return (
+            <div className="app-content">
+                <h1>Hey , Ninjas</h1>
+                <p>My Name is: { this.state.name } I am { this.state.age}</p>
+                <button onClick={this.handleClick}>Click Me</button><br/>
+                <button onMouseOver={this.handleMouseOver}>Hover Me</button><br/>
+                <p onCopy={this.handleCopy}>Copy Me</p>
+            </div>
+          )
+        }
+      }
+      ReactDOM.render(<App />,document.getElementById('app'))
+    </script>
+</body>
+</html>
