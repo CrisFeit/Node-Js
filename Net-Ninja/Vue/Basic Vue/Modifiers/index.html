@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue Basics</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+
+<body>
+  <h1>Vue Basics</h1>
+  <div id="app">
+    <h2> {{ title }}</h2>
+    <button v-on:click.alt="logMessage">Alt click</button>
+    <button v-on:click.ctrl="logMessage">Ctrl Click</button>
+    <a href="http://www.google.com" v-on:click.prevent="logMessage">Prevent Link</a>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

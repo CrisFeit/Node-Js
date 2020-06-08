@@ -1,0 +1,50 @@
+/* 
+  Brand  Colors 
+*/
+$color-primary       : #753bbd;
+$color-secondary     : #b69969;
+$color-white         : #fcfcfc;
+$color-dark          : #272626;
+
+/* 
+  Colors
+*/
+
+$color-ice           : #F5F5F5;
+$color-silver        : #e7e7e7;
+$color-dark-middle   : #484747;
+$color-grey          : #aaaaaa;
+$color-grey-dark     : #807f7f;
+$color-grey-light    : #fbfbfb;
+$color-grey-medium   : #f0f0f0;
+
+
+/**
+ * Aerts boxes
+ */
+ $success-text       : #3c763d !default;
+ $success-background : #dff0d8 !default;
+ $success-border     : darken($success-background, 5%) !default;
+ 
+ $info-text          : #31708f !default;
+ $info-background    : #d9edf7 !default;
+ $info-border        : darken($info-background, 7%) !default;
+ 
+ $warning-text       : #8a6d3b !default;
+ $warning-background : #faf2cc !default;
+ $warning-border     : darken($warning-background, 15%) !default;
+ 
+ $danger-text        : #a94442 !default;
+ $danger-background  : #f2dede !default;
+ $danger-border      : darken($danger-background, 5%) !default;
+ 
+/*
+  Social Media Colors
+ */
+ $color-facebook  : #526cac !default;
+ $color-google    : #d34b37 !default;
+ $color-instagram : #C13584 !default;
+ $color-linkedin  : #0286be !default;
+ $color-rss       : #f9a600 !default;
+ $color-twitter   : #1ebaec !default;
+ $color-youtube   : #c42232 !default;

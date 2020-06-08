@@ -1,0 +1,29 @@
+@import './font-flex';
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    @extend %font-flex;
+}
+
+body {
+    box-sizing: border-box;
+
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-rendering: optimizeLegibility;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* stop WebKit and Windows mobile changing text size */
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+
+    // color: $color-body-text;
+    // background-color: $color-body-bg;
+    // font-family: $font-main;
+}
+main{
+    width: 100%;
+}

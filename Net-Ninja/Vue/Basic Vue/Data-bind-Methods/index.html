@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue Basics</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+    .one {
+      color: green;
+    }
+
+    .two {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Vue Basics</h1>
+  <div id="app">
+    <h2> {{ title }}</h2>
+    <p v-if="showName">Mario</p>
+    <p v-else-if="showAge">25</p>
+
+    <button v-on:click="tooggleName">ShowName : {{showName}} </button>
+    <button v-on:click="tooggleAge">ShowAge  : {{showAge}} </button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

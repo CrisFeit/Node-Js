@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+  	
+    // Match logged in user doc in users collection
+    match /users/{userId}{ 
+      allow read, write: if request.time < timestamp.date(2020, 3, 10);
+    }
+    
+    // Match any doc in guides collection
+    match /sells/{sellsId}{
+    	allow read,write  : if request.auth.uid != null ;
+    }
+  }
+}
