@@ -4,7 +4,6 @@
     "module": "commonjs",
     "lib": ["ES6"],
     "allowJs": true,
-    // "sourceMap": true,
     "outDir": "./dist",
     "rootDir": "./src",
     "typeRoots": [
@@ -25,5 +24,8 @@
       "@config/*": ["./src/config/*"]
       
     }
-  }
+  },
+  "include": [
+    "src/**/*"
+  ]
 }
