@@ -3,7 +3,9 @@ import { ThemeContext } from '../contexts/ThemeContext';
 
 class Booklist extends Component {
     static contextType = ThemeContext;
-
+    state = {
+        mystate : true
+    }
     render() {
         const { isLightTheme , light, dark } = this.context
         const theme = isLightTheme ? light : dark

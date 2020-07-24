@@ -36,7 +36,7 @@ nav ul li {
   padding: 0;
   list-style-type: none;
 }
-.book-list li {
+.book-list li,button {
   padding: 10px;
   margin: 10px auto;
   border-radius: 10px;
