@@ -3,6 +3,7 @@
     height: 100vh;
     position: relative;
     display: flex;
+    overflow: hidden;
 }
 
 #page-map aside{
@@ -59,4 +60,21 @@
 
 #page-map .create-orphanage:hover{
     background-color: #17d6ed;
+}
+
+#page-map .map-popup .leaflet-popup-content-wrapper{
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 20px;
+    box-shadow: none;
+}
+
+#page-map .map-popup .leaflet-popup-content-content{
+    color: #8889a5;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 8px 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

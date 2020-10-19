@@ -1,0 +1,21 @@
+:root{
+  /* Colors */
+  --color-primary : #00db00;
+  --color-primary-med: #19af19;
+  --color-primary-dark: #669f64;
+
+  --color-text-dark: #333;
+  --color-light: snow;
+  --color-background-dark-light: #1e1e1e;
+  --color-background-dark: #0a0a0a;
+  --text-shine: 0 0 7px snow;
+  
+  /* Fonts */
+  
+  --type-first: Helvetica ,  Arial , sans-serif;
+  --type-second: 'Spectral', Georgia;
+
+  /* Dimensions */
+  --container : 3%;
+  --height-header : 12vh;
+}
