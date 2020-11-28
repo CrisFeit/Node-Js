@@ -54,7 +54,7 @@ main > h1 {
     transform: scale(1.05);
 }
 
-.card--id {
+.card__id {
     background: #cebf7b;
     width: 3rem;
     color: #333;
@@ -65,20 +65,20 @@ main > h1 {
     top: 0;
     left: 0;
 }
-.card--name {
+.card__name {
     text-transform: capitalize;
     color: #fff;
     font-size: 2rem;
     font-weight: 700;
 }
 
-.card--image {
+.card__image {
     width: 150px;
     display: block;
     margin: auto;
 }
 
-.card--details {
+.card__details {
     font-size: 1.3rem;
     color: #dbca80;
 }
