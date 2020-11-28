@@ -8,18 +8,22 @@ interface IPokemon {
     type: string
 }
 
-function fetchData(): void {
-    for (let i = 1; i <= pokemons; i++) {
-        getPokemon(i)
-    }
+function showPokemon(pokemon: IPokemon): void {
+    let output: string = `
+          <div class="card">
+              <span class="card__id">#${pokemon.id}</span>
+              <img class="card__image" src=${pokemon.image} alt=${pokemon.name} />
+              <h1 class="card__name">${pokemon.name}</h1>
+              <span class="card__details">${pokemon.type}</span>
+          </div>
+      `
+    container.innerHTML += output
 }
 
 async function getPokemon(id: number): Promise<void> {
     const data: Response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     const pokemon: any = await data.json()
-    const pokemonType: string = pokemon.types
-        .map((poke: any) => poke.type.name)
-        .join(', ')
+    const pokemonType: string = pokemon.types.map(({ type }: any) => type.name).join(', ')
 
     const transformedPokemon = {
         id: pokemon.id,
@@ -31,16 +35,10 @@ async function getPokemon(id: number): Promise<void> {
     showPokemon(transformedPokemon)
 }
 
-function showPokemon(pokemon: IPokemon): void {
-    let output: string = `
-          <div class="card">
-              <span class="card__id">#${pokemon.id}</span>
-              <img class="card__image" src=${pokemon.image} alt=${pokemon.name} />
-              <h1 class="card__name">${pokemon.name}</h1>
-              <span class="card__details">${pokemon.type}</span>
-          </div>
-      `
-    container.innerHTML += output
+function fetchData(): void {
+    for (let i = 1; i <= pokemons; i++) {
+        getPokemon(i)
+    }
 }
 
 fetchData()
