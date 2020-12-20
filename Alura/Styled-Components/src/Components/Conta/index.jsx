@@ -11,6 +11,10 @@ const IconeMargin = styled(Icone)`
   margin-top: 2px;
 `
 
+const SaldoWrapper = styled.div`
+  font-size: clamp(.7rem, 1vw + 1rem , 2rem);
+`
+
 const Conta = () => {
   const [toggleState, untoggle] = useState(true);
 
@@ -21,7 +25,7 @@ const Conta = () => {
   return (
     <Box>
       <h2>Conta</h2>
-      <div style={{ fontSize: "26px", padding: "20px 0" }}>
+      <SaldoWrapper>
         Saldo disponível{" "}
         <span>
           <IconeTema src={dinheiro} alt="Ícone Saldo" />
@@ -31,7 +35,7 @@ const Conta = () => {
             <Detalhe>R$</Detalhe> 0,00{" "}
           </Saldo>
         ) : null}
-      </div>
+      </SaldoWrapper>
 
       <Botao onClick={toggleHandler}>
         <IconeMargin

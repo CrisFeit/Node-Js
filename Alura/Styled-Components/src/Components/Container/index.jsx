@@ -7,7 +7,8 @@ import Extrato from "../Extrato";
 const Container = styled.div`
   background-color: ${ ({ theme })=> theme.body  };
   min-height: 90vh;
-  padding: 0px 15vw;
+  padding: 0px 10vw;
+  margin: auto;
 `
 const Conteudo = styled.section`
   display: flex;
