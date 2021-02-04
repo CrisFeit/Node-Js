@@ -22,6 +22,18 @@ class UserAPI extends RESTDataSource {
         user.role = await this.get(`/roles/${user.role}`)
         return user
     }
+
+    async adicionaUser(user){
+        return ({
+            nome: user.nome,
+            ativo: user.ativo,
+            email: user.email,
+            role: {
+                id : 1,
+                type: user.role
+            }
+        })
+    }
 }
 
 module.exports = UserAPI
