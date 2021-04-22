@@ -24,7 +24,7 @@ type HomeProps = {
 
 export default function Home(props: HomeProps) {
   return (
-    <div className={StyleSheet.homepage}>
+    <div className={styles.homepage}>
       {JSON.stringify(props.episodes)}
     </div>
   )
