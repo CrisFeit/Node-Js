@@ -10,7 +10,20 @@ const config = require('./config')
 
 // The server should responde t all request with a string
 const server = http.createServer((req, res) => {
-    
+    unifiedServer(req,res)
+})
+
+// Instantiate the HTTPS server
+
+
+// Start the HTTPS server
+
+// Start the server
+server.listen(config.port, () => console.log(`The server is listening on port ${config.port} in ${config.envName} mode`))
+
+// All the server logic for both the http and https server
+const unifiedServer = function(req,res){
+ 
     // Get the URL and parse it
     let parsedUrl = url.parse(req.url, true)
     // Get the path
@@ -72,11 +85,8 @@ const server = http.createServer((req, res) => {
             '\nRequest received with these headers: ', headers,
             '\nRequest received with these payload: ', buffer
         );
-    })
-})
-
-// Start the server
-server.listen(config.port, () => console.log(`The server is listening on port ${config.port} in ${config.envName} mode`))
+    })   
+}
 
 // Define the handlers
 const handlers = {}
@@ -89,7 +99,6 @@ handlers.sample = function(data,callback){
 
 //Not found handler
 handlers.notFound = function(data,callback){
-
     callback(404,{'name': 'Not Founded'})
 }
 
