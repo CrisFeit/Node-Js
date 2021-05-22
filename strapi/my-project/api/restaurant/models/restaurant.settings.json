@@ -2,8 +2,7 @@
   "kind": "collectionType",
   "collectionName": "restaurants",
   "info": {
-    "name": "restaurant",
-    "description": ""
+    "name": "Restaurant"
   },
   "options": {
     "increments": true,
@@ -19,6 +18,10 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "categories": {
+      "via": "restaurants",
+      "collection": "category"
     }
   }
 }
